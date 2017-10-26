@@ -1,8 +1,5 @@
-Перед выполнением заданий важно самостоятельно повторить шаги, выполняемые на уроке.
+Vagrant Documentation
+Welcome to the documentation for Vagrant - the command line utility for managing the lifecycle of virtual machines. This website aims to document every feature of Vagrant from top-to-bottom, covering as much detail as possible. If you are just getting started with Vagrant, it is highly recommended that you start with the getting started guide first, and then return to this page.
 
-1) Расписать предназначение всех корневых папок вашего дистрибутива.
-2) Найти исполняемые файлы команды hostname.
-3) Найти мануал команды ifconfig.
-4) Добавить в индексированные месторасположения каталог лог-файлов.
-5) Проверить налчие псевдонимов у команды date.
+The navigation will take you through each component of Vagrant. Click on a navigation item to get started, or read more about why developers, designers, and operators choose Vagrant for their needs.
 
