@@ -52,7 +52,7 @@ Vagrant.configure("2") do |config|
   # backing providers for Vagrant. These expose provider-specific options.
   # Example for VirtualBox:
   #
-  #@vtraida vbox name
+  #@vtraida vbox name in gui
   config.vm.provider "virtualbox" do |vb|
   vb.name = "srv_eva"
   end
