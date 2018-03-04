@@ -7,13 +7,21 @@ f308e38
 ==> default: Attempting graceful shutdown of VM...
 4631bfb
 ==> default: Attempting graceful shutdown of VM...
-acer-pc:centos6 vtraida$ 
-acer-pc:centos6 vtraida$ vagrant global-status
+
+vtraida$ vagrant global-status
 id       name    provider   state    directory                           
 -------------------------------------------------------------------------
 f308e38  srv_eva virtualbox poweroff /Users/vtraida/vagrantspace/2       
 5fa28c7  default virtualbox poweroff /Users/vtraida/vagrantspace/centos  
 4631bfb  default virtualbox poweroff /Users/vtraida/vagrantspace/centos6 
+
+-global-status lists all boxes
+-filter that for lines containing virtualbox (Filters out the help text, will break if you're using some other provider)
+-Filter that to display only the first 9 characters (the global unique ID)
+-While we can still read a line from that input, read it as the variable $line then:
+--Print out that $line
+--run vagrant halt $line halting the vagrant for that global unique ID
+
 
 ***
 
