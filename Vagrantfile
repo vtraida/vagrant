@@ -55,9 +55,13 @@ Vagrant.configure("2") do |config|
   # the path on the host to the actual folder. The second argument is
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
-  #@vtraida root vagrant folder from host, folder in vm
+  #@vtraida Mounting shared folders...
+  #srv_eva: /host_files => /Users/vtraida/vagrantspace/foldertest
+  #srv_eva: /vagrant_data => /Users/vtraida/vagrantspace/dataroot 
+  
+  #vagrant folder from host, folder in vm
   config.vm.synced_folder ".", "/host_files"
-  @vraida
+  #@vraida
   # config.vm.synced_folder "../data", "/vagrant_data"
 
   # Provider-specific configuration so you can fine-tune various
