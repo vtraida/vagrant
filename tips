@@ -14,3 +14,23 @@ id       name    provider   state    directory
 f308e38  srv_eva virtualbox poweroff /Users/vtraida/vagrantspace/2       
 5fa28c7  default virtualbox poweroff /Users/vtraida/vagrantspace/centos  
 4631bfb  default virtualbox poweroff /Users/vtraida/vagrantspace/centos6 
+
+***
+
+Vagrant, auto-update VirtualBox Guest Additions
+After updating your VirtualBox installation might get the following message after when starting you box with vagrant up:
+
+'The guest additions on this VM do not match the install version of VirtualBox!'
+
+Most of the time everything will keep working just fine and you can ignore this message. But when it doesn't (ie. your mounts won't work anymore), you need to update you guest additions.
+
+Fortunately there is the Vbguest plugin!
+
+Just go to the directory where your Vagrantfile is located. And type the following:
+
+$ vagrant plugin install vagrant-vbguest
+Now every time you start you box with vagrant up your box will check if your Guest Additions version matches the one of your host, if not, it will update them automatically.
+
+More info on the Vbguest plugin can be found on their Github repository: https://github.com/dotless-de/vagrant-vbguest
+
+***
