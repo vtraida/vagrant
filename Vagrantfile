@@ -22,7 +22,7 @@ Vagrant.configure("2") do |config|
   config.vm.box_version = "20180228.1.0"
   #@vtraida set host name
   #!!!The hostname set for the VM should only contain letters, numbers,hyphens or dots. It cannot start with a hyphen or dot.
-  config.vm.hostname = "srv-eva"
+  config.vm.hostname = "srv-eva1"
   #@vtraida name in global status
   config.vm.define "srv_eva"
   #@vtraida
