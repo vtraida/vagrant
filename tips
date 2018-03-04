@@ -42,3 +42,14 @@ Now every time you start you box with vagrant up your box will check if your Gue
 More info on the Vbguest plugin can be found on their Github repository: https://github.com/dotless-de/vagrant-vbguest
 
 ***
+Kill all running Vagrant VMs
+
+In case you want to indiscriminately destroy all of the running Vagrant VMs on your machine, you can run the following:
+
+vtraida$ for i in `vagrant global-status | grep virtualbox | awk '{ print $1 }'` ; do vagrant destroy $i ; done
+    srv_eva: Are you sure you want to destroy the 'srv_eva' VM? [y/N] y
+==> srv_eva: Destroying VM and associated drives...
+    default: Are you sure you want to destroy the 'default' VM? [y/N] y
+==> default: Destroying VM and associated drives...
+    default: Are you sure you want to destroy the 'default' VM? [y/N] y
+==> default: Destroying VM and associated drives...
