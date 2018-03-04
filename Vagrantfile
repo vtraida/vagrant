@@ -13,7 +13,15 @@ Vagrant.configure("2") do |config|
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
   config.vm.box = "ubuntu/xenial64"
-
+  #@vtraida specific version of distro - https://app.vagrantup.com/ubuntu/boxes/xenial64/versions/20180228.1.0 
+  #if new box
+  #vagrant init ubuntu/xenial64 \
+  #--box-version 20180228.1.0
+  #vagrant up
+  #@vtraida
+  config.vm.box_version = "20180228.1.0"
+  #@vtraida set host name
+  config.vm.hostname = "srv_eva"
   #@vtraida name in global status
   config.vm.define "srv_eva"
   #@vtraida
