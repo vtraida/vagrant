@@ -1,0 +1,16 @@
+halt all machines
+example:
+vtraida$ vagrant global-status | grep virtualbox | cut -c 1-9 | while read line; do echo $line; vagrant halt $line; done;
+f308e38
+==> srv_eva: Attempting graceful shutdown of VM...
+5fa28c7
+==> default: Attempting graceful shutdown of VM...
+4631bfb
+==> default: Attempting graceful shutdown of VM...
+acer-pc:centos6 vtraida$ 
+acer-pc:centos6 vtraida$ vagrant global-status
+id       name    provider   state    directory                           
+-------------------------------------------------------------------------
+f308e38  srv_eva virtualbox poweroff /Users/vtraida/vagrantspace/2       
+5fa28c7  default virtualbox poweroff /Users/vtraida/vagrantspace/centos  
+4631bfb  default virtualbox poweroff /Users/vtraida/vagrantspace/centos6 
