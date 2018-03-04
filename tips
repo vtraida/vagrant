@@ -70,3 +70,15 @@ curl -sS https://keybase.io/hashicorp/key.asc | gpg --import
 gpg --verify vagrant_2.0.2_SHA256SUMS.sig vagrant_2.0.2_SHA256SUMS
 shasum -a 256 -c <(cat vagrant_2.0.2_SHA256SUMS | grep 64.deb) -s
 sudo apt install ./vagrant_2.0.2_x86_64.deb
+
+***
+
+Run web server
+
+sudo python -m SimpleHTTPServer 80
+
+config.vm.network "forwarded_port", guest: 80, host: 8080
+http://localhost:8080/
+
+***
+
