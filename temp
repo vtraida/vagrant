@@ -1,0 +1,5 @@
+sudo rm -rf /var/www 
+sudo ln -fs /host_files /var/www/html/
+ls /var/www/html/
+
+echo "<strong>Hello vagrant :-) </strong>" > index.html
