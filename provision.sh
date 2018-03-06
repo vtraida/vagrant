@@ -1,1 +1,8 @@
-#!/usr/bin/env bashecho "Installing Apache and setting it up..."apt-get update >/dev/null 2>&1apt-get install -y apache2 >/dev/null 2>&1rm -rf /var/wwwln -fs /host_files /var/www/html
+#!/usr/bin/env bash
+
+apt-get update
+apt-get install -y apache2
+if ! [ -L /var/www ]; then
+  rm -rf /var/www
+  ln -fs /vagrant /var/www
+fi
