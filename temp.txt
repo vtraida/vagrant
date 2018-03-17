@@ -3,3 +3,21 @@ sudo ln -fs /host_files /var/www/html/
 ls /var/www/html/
 
 echo "<strong>Hello vagrant :-) </strong>" > index.html
+
+vagrant version
+==> vagrant: A new version of Vagrant is available: 2.0.3!
+==> vagrant: To upgrade visit: https://www.vagrantup.com/downloads.html
+
+Installed Version: 2.0.2
+Latest Version: 2.0.3
+ 
+To upgrade to the latest version, visit the downloads page and
+download and install the latest version of Vagrant from the URL
+below:
+
+  https://www.vagrantup.com/downloads.html
+
+If you're curious what changed in the latest release, view the
+CHANGELOG below:
+
+  https://github.com/mitchellh/vagrant/blob/v2.0.3/CHANGELOG.md
