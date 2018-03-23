@@ -63,6 +63,8 @@ sudo apt install curl
 
 For servers, the following will first authenticate and then install Vagrant version 2.0.2 (currently the latest) on Ubuntu x64:
 
+# check new version https://releases.hashicorp.com/vagrant/
+
 curl -O https://releases.hashicorp.com/vagrant/2.0.2/vagrant_2.0.2_x86_64.deb
 curl -O https://releases.hashicorp.com/vagrant/2.0.2/vagrant_2.0.2_SHA256SUMS
 curl -O https://releases.hashicorp.com/vagrant/2.0.2/vagrant_2.0.2_SHA256SUMS.sig
