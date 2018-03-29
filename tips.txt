@@ -73,6 +73,12 @@ gpg --verify vagrant_2.0.2_SHA256SUMS.sig vagrant_2.0.2_SHA256SUMS
 shasum -a 256 -c <(cat vagrant_2.0.2_SHA256SUMS | grep 64.deb) -s
 sudo apt install ./vagrant_2.0.2_x86_64.deb
 
+vagrant version
+
+$ vagrant version
+Installed Version: 2.0.3
+Latest Version: 2.0.3
+
 ***
 
 Run web server
