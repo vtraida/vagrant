@@ -20,4 +20,161 @@ below:
 If you're curious what changed in the latest release, view the
 CHANGELOG below:
 
-  https://github.com/mitchellh/vagrant/blob/v2.0.3/CHANGELOG.md
+  https://github.com/mitchellh/vagrant/blob/v2.0.3/CHANGELOG.md 
+
+
+
+
+
+acer-pc:~ vtraida$ cd vagrantspace/provision_test/
+acer-pc:provision_test vtraida$ vagrant reload
+==> srv_eva: Checking if box 'ubuntu/xenial64' is up to date...
+==> srv_eva: Clearing any previously set forwarded ports...
+==> srv_eva: Clearing any previously set network interfaces...
+==> srv_eva: Preparing network interfaces based on configuration...
+    srv_eva: Adapter 1: nat
+==> srv_eva: Forwarding ports...
+    srv_eva: 80 (guest) => 8080 (host) (adapter 1)
+    srv_eva: 22 (guest) => 2222 (host) (adapter 1)
+==> srv_eva: Running 'pre-boot' VM customizations...
+==> srv_eva: Booting VM...
+==> srv_eva: Waiting for machine to boot. This may take a few minutes...
+    srv_eva: SSH address: 127.0.0.1:2222
+    srv_eva: SSH username: vagrant
+    srv_eva: SSH auth method: private key
+    srv_eva: Warning: Connection reset. Retrying...
+    srv_eva: Warning: Remote connection disconnect. Retrying...
+    srv_eva: Warning: Connection reset. Retrying...
+    srv_eva: Warning: Remote connection disconnect. Retrying...
+    srv_eva: Warning: Connection reset. Retrying...
+    srv_eva: Warning: Remote connection disconnect. Retrying...
+==> srv_eva: Machine booted and ready!
+[srv_eva] GuestAdditions 5.2.8 running --- OK.
+==> srv_eva: Checking for guest additions in VM...
+==> srv_eva: Setting hostname...
+==> srv_eva: Mounting shared folders...
+    srv_eva: /host_files => /Users/vtraida/vagrantspace/provision_test
+==> srv_eva: Machine already provisioned. Run `vagrant provision` or use the `--provision`
+==> srv_eva: flag to force provisioning. Provisioners marked to run always will still run.
+acer-pc:provision_test vtraida$ vagrant ssh
+Welcome to Ubuntu 16.04.4 LTS (GNU/Linux 4.4.0-116-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+4 packages can be updated.
+2 updates are security updates.
+
+
+Last login: Sat Mar 17 14:34:09 2018 from 10.0.2.2
+vagrant@srv-eva1:~$ ifconfig
+enp0s3    Link encap:Ethernet  HWaddr 02:24:89:81:87:2f
+          inet addr:10.0.2.15  Bcast:10.0.2.255  Mask:255.255.255.0
+          inet6 addr: fe80::24:89ff:fe81:872f/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:885 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:561 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:320827 (320.8 KB)  TX bytes:68694 (68.6 KB)
+
+lo        Link encap:Local Loopback
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+vagrant@srv-eva1:~$ exit
+logout
+Connection to 127.0.0.1 closed.
+acer-pc:provision_test vtraida$ vagrant halt
+==> srv_eva: Attempting graceful shutdown of VM...
+acer-pc:provision_test vtraida$ vi vagrantfile
+acer-pc:provision_test vtraida$ vagrant up
+Bringing machine 'srv_eva' up with 'virtualbox' provider...
+==> srv_eva: Checking if box 'ubuntu/xenial64' is up to date...
+==> srv_eva: Clearing any previously set forwarded ports...
+==> srv_eva: Clearing any previously set network interfaces...
+==> srv_eva: Available bridged network interfaces:
+1) en0: Wi-Fi (AirPort)
+2) p2p0
+3) awdl0
+4) en1: Thunderbolt 1
+5) en2: Thunderbolt 2
+6) bridge0
+==> srv_eva: When choosing an interface, it is usually the one that is
+==> srv_eva: being used to connect to the internet.
+    srv_eva: Which interface should the network bridge to? 1
+==> srv_eva: Preparing network interfaces based on configuration...
+    srv_eva: Adapter 1: nat
+    srv_eva: Adapter 2: bridged
+==> srv_eva: Forwarding ports...
+    srv_eva: 80 (guest) => 8080 (host) (adapter 1)
+    srv_eva: 22 (guest) => 2222 (host) (adapter 1)
+==> srv_eva: Running 'pre-boot' VM customizations...
+==> srv_eva: Booting VM...
+==> srv_eva: Waiting for machine to boot. This may take a few minutes...
+    srv_eva: SSH address: 127.0.0.1:2222
+    srv_eva: SSH username: vagrant
+    srv_eva: SSH auth method: private key
+    srv_eva: Warning: Connection reset. Retrying...
+    srv_eva: Warning: Remote connection disconnect. Retrying...
+    srv_eva: Warning: Connection reset. Retrying...
+    srv_eva: Warning: Remote connection disconnect. Retrying...
+==> srv_eva: Machine booted and ready!
+[srv_eva] GuestAdditions 5.2.8 running --- OK.
+==> srv_eva: Checking for guest additions in VM...
+==> srv_eva: Setting hostname...
+==> srv_eva: Configuring and enabling network interfaces...
+==> srv_eva: Mounting shared folders...
+    srv_eva: /host_files => /Users/vtraida/vagrantspace/provision_test
+==> srv_eva: Machine already provisioned. Run `vagrant provision` or use the `--provision`
+==> srv_eva: flag to force provisioning. Provisioners marked to run always will still run.
+acer-pc:provision_test vtraida$ vagrant ssh
+Welcome to Ubuntu 16.04.4 LTS (GNU/Linux 4.4.0-116-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+4 packages can be updated.
+2 updates are security updates.
+
+
+Last login: Sat Mar 17 14:49:24 2018 from 10.0.2.2
+vagrant@srv-eva1:~$ ifconfig
+enp0s3    Link encap:Ethernet  HWaddr 02:24:89:81:87:2f
+          inet addr:10.0.2.15  Bcast:10.0.2.255  Mask:255.255.255.0
+          inet6 addr: fe80::24:89ff:fe81:872f/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:1120 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:737 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:343904 (343.9 KB)  TX bytes:91958 (91.9 KB)
+
+enp0s8    Link encap:Ethernet  HWaddr 08:00:27:ee:03:9b
+          inet addr:192.168.40.118  Bcast:192.168.40.255  Mask:255.255.255.0
+          inet6 addr: fe80::a00:27ff:feee:39b/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:10 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:17 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:1738 (1.7 KB)  TX bytes:2326 (2.3 KB)
+
+lo        Link encap:Local Loopback
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
